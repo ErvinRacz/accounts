@@ -28,19 +28,30 @@ public class Account {
   @Convert(converter = IbanConverter.class)
   @Column(nullable = false, unique = true)
   Iban iban;
+
   @Column(nullable = false)
   Currency currency;
+
   @Convert(converter = BalanceConverter.class)
   @Column(nullable = false)
   Balance balance;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @Override
   public String toString() {
-    return "Account{" + "iban=" + String.format("%s...", iban.getObfuscatedIban()) + ", currency="
-        + currency + ", balance=" + balance + ", id=" + id + '}';
+    return "Account{"
+        + "iban="
+        + String.format("%s...", iban.getObfuscatedIban())
+        + ", currency="
+        + currency
+        + ", balance="
+        + balance
+        + ", id="
+        + id
+        + '}';
   }
 
   @Override

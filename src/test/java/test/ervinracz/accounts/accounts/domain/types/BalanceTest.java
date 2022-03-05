@@ -19,7 +19,7 @@ class BalanceTest {
   @Test
   void should_not_allow_to_deposit_negative_value() {
     var balance = new Balance();
-    assertThrows(UnsupportedOperationException.class,
-        () -> balance.deposit(BigDecimal.valueOf(-1000)));
+    assertThrows(
+        UnsupportedOperationException.class, () -> balance.deposit(BigDecimal.valueOf(-1000)));
   }
 }

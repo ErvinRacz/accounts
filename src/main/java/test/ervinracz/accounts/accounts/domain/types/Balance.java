@@ -1,7 +1,9 @@
 package test.ervinracz.accounts.accounts.domain.types;
 
 import java.math.BigDecimal;
+import lombok.ToString;
 
+@ToString
 public class Balance {
 
   private BigDecimal amount;

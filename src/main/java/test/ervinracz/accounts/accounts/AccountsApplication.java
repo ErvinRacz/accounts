@@ -25,10 +25,19 @@ public class AccountsApplication {
   public CommandLineRunner demo(AccountRepo repo) {
     return (args) -> {
       // save a few accounts for the demo
-      repo.save(Account.builder().iban(Iban.of("KW81CBKU0000000000001234560101"))
-          .currency(Currency.getInstance("RON")).balance(new Balance()).build());
+      Iban iban1 = Iban.of("KW81CBKU0000000000001234560101");
+      repo.findByIban(iban1)
+          .ifPresentOrElse(
+              (account) -> log.info(String.format("Account already set: %s", account.toString())),
+              () ->
+                  repo.save(
+                      Account.builder()
+                          .iban(iban1)
+                          .currency(Currency.getInstance("RON"))
+                          .balance(new Balance())
+                          .build()));
 
-      log.info("Demo account have been added:");
+      log.info("Demo accounts have been added:");
       log.info("-------------------------------");
       repo.findAll().forEach(account -> log.info(account.toString()));
     };

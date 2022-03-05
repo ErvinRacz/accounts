@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component liquibaseFileType="SQL" name="DatabaseMigrationSettings">
+    <database-infos>
+      <database-info>
+        <dbms-id>postgres</dbms-id>
+        <option name="enabled" value="true"/>
+      </database-info>
+    </database-infos>
+  </component>
+</project>

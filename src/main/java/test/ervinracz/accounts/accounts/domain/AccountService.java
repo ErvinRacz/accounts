@@ -12,7 +12,6 @@ import test.ervinracz.accounts.accounts.domain.dtos.AccountDto;
 import test.ervinracz.accounts.accounts.domain.entities.AccountRepo;
 import test.ervinracz.accounts.accounts.domain.exceptions.AccountRequestedNotFoundException;
 import test.ervinracz.accounts.accounts.domain.types.Balance;
-import test.ervinracz.accounts.accounts.domain.types.ExchangeRateCacheService;
 import test.ervinracz.accounts.accounts.domain.types.Iban;
 
 @Service

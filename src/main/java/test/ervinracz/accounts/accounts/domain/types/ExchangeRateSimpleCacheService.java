@@ -6,12 +6,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import test.ervinracz.accounts.accounts.domain.ExchangeRateCacheService;
 import test.ervinracz.accounts.accounts.domain.ExchangeRatesApiClient;
 import test.ervinracz.accounts.accounts.domain.exceptions.ExchangeRateNotAvailableForCurrenciesException;
 
 @Service
 @RequiredArgsConstructor
-public class ExchangeRateCacheService {
+public class ExchangeRateSimpleCacheService implements ExchangeRateCacheService {
 
   private final ExchangeRatesApiClient exchangeRatesApiClient;
 

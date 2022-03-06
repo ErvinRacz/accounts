@@ -6,12 +6,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import test.ervinracz.accounts.accounts.domain.entities.Account;
 import test.ervinracz.accounts.accounts.domain.entities.AccountRepo;
 import test.ervinracz.accounts.accounts.domain.types.Balance;
 import test.ervinracz.accounts.accounts.domain.types.Iban;
 
+@EnableCaching
+@EnableFeignClients
 @SpringBootApplication
 public class AccountsApplication {
 
@@ -33,8 +37,8 @@ public class AccountsApplication {
                   repo.save(
                       Account.builder()
                           .iban(iban1)
-                          .currency(Currency.getInstance("RON"))
-                          .balance(new Balance())
+                          .currency(Currency.getInstance("EUR"))
+                          .balance(new Balance("100.00"))
                           .build()));
 
       log.info("Demo accounts have been added:");

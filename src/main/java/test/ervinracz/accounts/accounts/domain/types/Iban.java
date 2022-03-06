@@ -29,6 +29,11 @@ public class Iban {
     return String.format("%s...", iban.substring(0, 5));
   }
 
+  @Override
+  public String toString() {
+    return getObfuscatedIban();
+  }
+
   public String getIbanAsString() {
     return iban;
   }

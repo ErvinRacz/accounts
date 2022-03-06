@@ -10,16 +10,13 @@ import org.junit.jupiter.api.Test;
 class BalanceTest {
 
   @Test
-  void should_deposit_positive_value() {
+  void should_deposit_positive_or_zero_amount() {
     var balance = new Balance();
-    balance.deposit(BigDecimal.valueOf(1000));
-    assertThat(balance.getAmount(), is(BigDecimal.valueOf(1000)));
+    assertThat(balance.getAmount(), is(BigDecimal.ZERO));
   }
 
   @Test
   void should_not_allow_to_deposit_negative_value() {
-    var balance = new Balance();
-    assertThrows(
-        UnsupportedOperationException.class, () -> balance.deposit(BigDecimal.valueOf(-1000)));
+    assertThrows(IllegalArgumentException.class, () -> new Balance(BigDecimal.valueOf(-1000)));
   }
 }

@@ -21,10 +21,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import test.ervinracz.accounts.accounts.domain.ExchangeRateCacheService;
 import test.ervinracz.accounts.accounts.domain.dtos.AccountDto;
 import test.ervinracz.accounts.accounts.domain.dtos.ExchangeRatesApiResponse;
-import test.ervinracz.accounts.accounts.domain.types.ExchangeRateSimpleCacheService;
+import test.ervinracz.accounts.accounts.domain.services.ExchangeRateCacheService;
+import test.ervinracz.accounts.accounts.domain.services.ExchangeRateSimpleCacheService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

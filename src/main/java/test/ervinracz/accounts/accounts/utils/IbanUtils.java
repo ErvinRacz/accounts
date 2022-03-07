@@ -35,4 +35,8 @@ public class IbanUtils {
     BigInteger totalInt = new BigInteger(total.toString());
     return totalInt.mod(new BigInteger("97")).equals(BigInteger.ONE);
   }
+
+  public static String obfuscate(String iban) {
+    return String.format("%s...", iban.substring(0, 5));
+  }
 }

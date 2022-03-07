@@ -21,6 +21,8 @@ import test.ervinracz.accounts.accounts.domain.dtos.ExchangeRatesApiResponse;
 import test.ervinracz.accounts.accounts.domain.entities.Account;
 import test.ervinracz.accounts.accounts.domain.entities.AccountRepo;
 import test.ervinracz.accounts.accounts.domain.exceptions.AccountRequestedNotFoundException;
+import test.ervinracz.accounts.accounts.domain.services.AccountService;
+import test.ervinracz.accounts.accounts.domain.services.ExchangeRatesApiClient;
 import test.ervinracz.accounts.accounts.domain.types.Balance;
 import test.ervinracz.accounts.accounts.domain.types.Iban;
 

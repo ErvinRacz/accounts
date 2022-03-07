@@ -1,4 +1,4 @@
-package test.ervinracz.accounts.accounts.domain;
+package test.ervinracz.accounts.accounts.domain.services;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;

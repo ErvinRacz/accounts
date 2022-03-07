@@ -18,15 +18,14 @@ public class Iban {
 
     if (!IbanUtils.isValid(iban)) {
       throw new IllegalArgumentException(
-          String.format(
-              "Following string is not an IBAN: %s", iban.trim().substring(0, 4) + "..."));
+          String.format("Following string is not an IBAN: %s", IbanUtils.obfuscate(iban)));
     }
 
     return new Iban(iban);
   }
 
   public String getObfuscatedIban() {
-    return String.format("%s...", iban.substring(0, 5));
+    return IbanUtils.obfuscate(iban);
   }
 
   @Override

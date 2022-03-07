@@ -1,4 +1,4 @@
-package test.ervinracz.accounts.accounts.domain;
+package test.ervinracz.accounts.accounts.domain.services;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
